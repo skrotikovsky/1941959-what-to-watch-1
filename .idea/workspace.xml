@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f420b2af-ac98-4405-ac0a-25041334c4db" name="Changes" comment="Добавил страницы">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/css/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/aviator.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/bg-header.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/bg-the-grand-budapest-hotel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/bohemian-rhapsody.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/dardjeeling-limited.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/fantastic-beasts-the-crimes-of-grindelwald.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/icons/add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/icons/full-screen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/icons/in-list.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/icons/pause.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/icons/play-s.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/johnny-english.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/macbeth.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/midnight-special.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/mindhunter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/moonrise-kingdom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/no-country-for-old-men.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/orlando.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/player-poster.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/pulp-fiction.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/revenant.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/seven-years-in-tibet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/shutter-island.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/snatch.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/the-grand-budapest-hotel-poster.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/war-of-the-worlds.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/we-need-to-talk-about-kevin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/img/what-we-do-in-the-shadows.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/css/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/avatar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/aviator.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/bg-header.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/bg-the-grand-budapest-hotel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/bohemian-rhapsody.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/dardjeeling-limited.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/fantastic-beasts-the-crimes-of-grindelwald.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/icons/add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/icons/full-screen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/icons/in-list.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/icons/pause.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/icons/play-s.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/johnny-english.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/macbeth.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/midnight-special.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/mindhunter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/moonrise-kingdom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/no-country-for-old-men.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/orlando.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/player-poster.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/pulp-fiction.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/revenant.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/seven-years-in-tibet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/shutter-island.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/snatch.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/the-grand-budapest-hotel-poster.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/war-of-the-worlds.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/we-need-to-talk-about-kevin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/img/what-we-do-in-the-shadows.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/app/app.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/film-card/film-card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/hooks/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/add-review/add-review component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/head-guest/head-guest component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/main-page/main-page component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-details/movie-details component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-in-list/movie-in-list component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-reviews/movie-reviews component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/my-list/my-list component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/player-pause/player-pause component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/player/player component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/sign-in-err/sign-in-err component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/sign-in-mess/sign-in-mess component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/pages/sign-in/sign-in component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/setupTests.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/store/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/types/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="module2-task1" />
+        <entry key="$PROJECT_DIR$/1941959-what-to-watch-1" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2F5B6VeHNwTdK8zCPz66J7prgqX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/public" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="ts.external.directory.path" value="E:\WebStorm 2021.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\skrut\WebstormProjects\1941959-what-to-watch-1\project\public" />
+      <recent name="C:\Users\skrut\WebstormProjects\1941959-what-to-watch-1\project" />
+      <recent name="C:\Users\skrut\WebstormProjects\1941959-what-to-watch-1\project\css" />
+      <recent name="C:\Users\skrut\WebstormProjects\1941959-what-to-watch-1\public" />
+      <recent name="C:\Users\skrut\WebstormProjects\1941959-what-to-watch-1\public\css" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f420b2af-ac98-4405-ac0a-25041334c4db" name="Changes" comment="" />
+      <created>1663771892682</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663771892682</updated>
+      <workItem from="1663771895770" duration="597000" />
+      <workItem from="1663825009457" duration="3193000" />
+      <workItem from="1665652589630" duration="837000" />
+      <workItem from="1665653975024" duration="275000" />
+      <workItem from="1665654333324" duration="2037000" />
+      <workItem from="1666017932838" duration="594000" />
+      <workItem from="1666266902401" duration="763000" />
+      <workItem from="1666729301568" duration="1478000" />
+      <workItem from="1670165223516" duration="2654000" />
+      <workItem from="1670168171524" duration="121000" />
+      <workItem from="1670240726715" duration="31334000" />
+      <workItem from="1673190957933" duration="594000" />
+      <workItem from="1676899877837" duration="8617000" />
+    </task>
+    <task id="LOCAL-00001" summary="Поменял имя наставника">
+      <created>1663840217840</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663840217840</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Create react app">
+      <created>1670166550783</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670166550783</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create react app">
+      <created>1670243278746</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670243278746</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Добавил страницы">
+      <created>1676971679061</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676971679061</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="4935b236-1dc8-4e29-8dbe-47b2b3e8e6aa">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="4935b236-1dc8-4e29-8dbe-47b2b3e8e6aa" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Поменял имя наставника" />
+    <MESSAGE value="Create react app" />
+    <MESSAGE value="Добавил страницы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил страницы" />
+  </component>
+</project>
