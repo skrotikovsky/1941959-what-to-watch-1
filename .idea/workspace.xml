@@ -1,107 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f420b2af-ac98-4405-ac0a-25041334c4db" name="Changes" comment="Добавил страницы">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/css/main.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/aviator.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/bg-header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/bg-the-grand-budapest-hotel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/bohemian-rhapsody.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/dardjeeling-limited.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/fantastic-beasts-the-crimes-of-grindelwald.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/icons/add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/icons/full-screen.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/icons/in-list.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/icons/pause.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/icons/play-s.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/johnny-english.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/macbeth.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/midnight-special.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/mindhunter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/moonrise-kingdom.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/no-country-for-old-men.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/orlando.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/player-poster.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/pulp-fiction.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/revenant.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/seven-years-in-tibet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/shutter-island.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/snatch.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/the-grand-budapest-hotel-poster.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/war-of-the-worlds.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/we-need-to-talk-about-kevin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/img/what-we-do-in-the-shadows.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/css/main.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/aviator.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/bg-header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/bg-the-grand-budapest-hotel.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/bohemian-rhapsody.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/dardjeeling-limited.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/fantastic-beasts-the-crimes-of-grindelwald.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/icons/add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/icons/full-screen.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/icons/in-list.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/icons/pause.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/icons/play-s.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/johnny-english.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/macbeth.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/midnight-special.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/mindhunter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/moonrise-kingdom.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/no-country-for-old-men.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/orlando.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/player-poster.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/pulp-fiction.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/revenant.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/seven-years-in-tibet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/shutter-island.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/snatch.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/the-grand-budapest-hotel-poster.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/war-of-the-worlds.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/we-need-to-talk-about-kevin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/img/what-we-do-in-the-shadows.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/app/app.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/film-card/film-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/hooks/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/add-review/add-review component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/head-guest/head-guest component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/main-page/main-page component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-details/movie-details component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-in-list/movie-in-list component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-page/movie-page component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/movie-reviews/movie-reviews component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/my-list/my-list component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/player-pause/player-pause component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/player/player component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/sign-in-err/sign-in-err component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/sign-in-mess/sign-in-mess component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/sign-in/sign-in component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/setupTests.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/store/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/types/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/tsconfig.json" afterDir="false" />
-    </list>
+    <list default="true" id="f420b2af-ac98-4405-ac0a-25041334c4db" name="Changes" comment="Добавил страницы" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +75,7 @@
       <workItem from="1670168171524" duration="121000" />
       <workItem from="1670240726715" duration="31334000" />
       <workItem from="1673190957933" duration="594000" />
-      <workItem from="1676899877837" duration="8617000" />
+      <workItem from="1676899877837" duration="9285000" />
     </task>
     <task id="LOCAL-00001" summary="Поменял имя наставника">
       <created>1663840217840</created>
@@ -205,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676971679061</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавил страницы">
+      <created>1676981759610</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676981759610</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
