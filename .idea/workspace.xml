@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f420b2af-ac98-4405-ac0a-25041334c4db" name="Changes" comment="Добавил страницы" />
+    <list default="true" id="f420b2af-ac98-4405-ac0a-25041334c4db" name="Changes" comment="Решение merge конфликта" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +75,7 @@
       <workItem from="1670168171524" duration="121000" />
       <workItem from="1670240726715" duration="31334000" />
       <workItem from="1673190957933" duration="594000" />
-      <workItem from="1676899877837" duration="9285000" />
+      <workItem from="1676899877837" duration="9702000" />
     </task>
     <task id="LOCAL-00001" summary="Поменял имя наставника">
       <created>1663840217840</created>
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676981759610</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Решение merge конфликта">
+      <created>1676982658316</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676982658316</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +152,7 @@
     <MESSAGE value="Поменял имя наставника" />
     <MESSAGE value="Create react app" />
     <MESSAGE value="Добавил страницы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил страницы" />
+    <MESSAGE value="Решение merge конфликта" />
+    <option name="LAST_COMMIT_MESSAGE" value="Решение merge конфликта" />
   </component>
 </project>
