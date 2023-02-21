@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f420b2af-ac98-4405-ac0a-25041334c4db" name="Changes" comment="Решение merge конфликта" />
+    <list default="true" id="f420b2af-ac98-4405-ac0a-25041334c4db" name="Changes" comment="Решение merge конфликта">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +77,7 @@
       <workItem from="1670168171524" duration="121000" />
       <workItem from="1670240726715" duration="31334000" />
       <workItem from="1673190957933" duration="594000" />
-      <workItem from="1676899877837" duration="9702000" />
+      <workItem from="1676899877837" duration="11651000" />
     </task>
     <task id="LOCAL-00001" summary="Поменял имя наставника">
       <created>1663840217840</created>
@@ -119,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676982658316</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Решение merge конфликта">
+      <created>1676982828044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676982828044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
