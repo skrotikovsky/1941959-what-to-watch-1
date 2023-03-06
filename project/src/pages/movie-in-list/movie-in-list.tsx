@@ -1,4 +1,4 @@
-function FilmInMyList() {
+function MovieInMyList() {
   return (
     <>
       <section className="film-card film-card--full">
@@ -143,4 +143,4 @@ function FilmInMyList() {
   );
 }
 
-export default FilmInMyList;
+export default MovieInMyList;
