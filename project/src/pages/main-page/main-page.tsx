@@ -1,4 +1,5 @@
 import FilmCard from '../../components/film-card/film-card';
+import {Link} from 'react-router-dom';
 
 type MainPageProps = {
   filmName: string;
@@ -6,7 +7,7 @@ type MainPageProps = {
   filmRealeseDate: string;
 }
 
-function MainPageComponent({filmName,filmGenre,filmRealeseDate}:MainPageProps): JSX.Element {
+function MainPage({filmName,filmGenre,filmRealeseDate}:MainPageProps): JSX.Element {
   return (
     <>
       <section className="film-card">
@@ -68,7 +69,7 @@ function MainPageComponent({filmName,filmGenre,filmRealeseDate}:MainPageProps): 
                   <svg viewBox="0 0 19 20" width={19} height={20}>
                     <use xlinkHref="#add" />
                   </svg>
-                  <span>My list</span>
+                  <Link to={'/mylist'}>My list</Link>
                   <span className="film-card__count">9</span>
                 </button>
               </div>
@@ -176,4 +177,4 @@ function MainPageComponent({filmName,filmGenre,filmRealeseDate}:MainPageProps): 
   );
 }
 
-export default MainPageComponent;
+export default MainPage;
