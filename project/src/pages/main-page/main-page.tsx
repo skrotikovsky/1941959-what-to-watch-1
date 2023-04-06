@@ -1,13 +1,17 @@
-import FilmCard from '../../components/film-card/film-card';
-import {Link} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import {Film} from '../../types/types';
+import FilmList from '../../components/film-list/film-list';
+import {AppRoute} from '../../consts';
 
 type MainPageProps = {
   filmName: string;
   filmGenre: string;
-  filmRealeseDate: string;
+  filmReleaseDate: string;
+  films:Film[];
 }
 
-function MainPage({filmName,filmGenre,filmRealeseDate}:MainPageProps): JSX.Element {
+function MainPage({filmName,filmGenre,filmReleaseDate, films}:MainPageProps): JSX.Element {
+  const navigate = useNavigate();
   return (
     <>
       <section className="film-card">
@@ -56,20 +60,20 @@ function MainPage({filmName,filmGenre,filmRealeseDate}:MainPageProps): JSX.Eleme
               <h2 className="film-card__title">{filmName}</h2>
               <p className="film-card__meta">
                 <span className="film-card__genre">{filmGenre}</span>
-                <span className="film-card__year">{filmRealeseDate}</span>
+                <span className="film-card__year">{filmReleaseDate}</span>
               </p>
               <div className="film-card__buttons">
-                <button className="btn btn--play film-card__button" type="button">
+                <button onClick={()=>navigate(AppRoute.Player)} className="btn btn--play film-card__button" type="button">
                   <svg viewBox="0 0 19 19" width={19} height={19}>
                     <use xlinkHref="#play-s" />
                   </svg>
                   <span>Play</span>
                 </button>
-                <button className="btn btn--list film-card__button" type="button">
+                <button onClick={()=>navigate(AppRoute.MyList)} className="btn btn--list film-card__button" type="button">
                   <svg viewBox="0 0 19 20" width={19} height={20}>
                     <use xlinkHref="#add" />
                   </svg>
-                  <Link to={'/mylist'}>My list</Link>
+                  <span>My List</span>
                   <span className="film-card__count">9</span>
                 </button>
               </div>
@@ -133,26 +137,7 @@ function MainPage({filmName,filmGenre,filmRealeseDate}:MainPageProps): JSX.Eleme
             </li>
           </ul>
           <div className="catalog__films-list">
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
-            <FilmCard/>
+            <FilmList films={films}/>
           </div>
           <div className="catalog__more">
             <button className="catalog__button" type="button">
