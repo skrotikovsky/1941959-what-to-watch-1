@@ -29,7 +29,7 @@ export function RatingLevel(rating: string): string{
   return 'Bad';
 }
 
-export enum ActiveSection {
+export enum ActiveTab {
   OVERVIEW= 'overview',
   DETAILS = 'details',
   REVIEWS = 'reviews'

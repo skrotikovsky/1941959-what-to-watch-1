@@ -35,7 +35,7 @@ export const films: Film[] = [
   {
     id: '3',
     name: 'Macbeth',
-    genre: 'detective',
+    genre: 'fantasy',
     dateOfRelease: '2016',
     starring: ['Lexus', 'Manes'],
     director: 'Tim Burton',
@@ -67,7 +67,7 @@ export const films: Film[] = [
   {
     id: '5',
     name: 'We need to talk about Kevin',
-    genre: 'horror',
+    genre: 'thriller',
     dateOfRelease: '2015',
     starring: ['Garden', 'Kovsky', 'Sand', 'Murray', 'Gaoz'],
     director: 'Steven Spilberg',
@@ -83,7 +83,7 @@ export const films: Film[] = [
   {
     id: '6',
     name: 'What We Do in the Shadows',
-    genre: 'someGenre',
+    genre: 'thriller',
     dateOfRelease: '2018',
     starring: ['Lambert', 'Watson'],
     director: 'Harrison Ford',
@@ -115,7 +115,7 @@ export const films: Film[] = [
   {
     id: '8',
     name: 'Johnny English',
-    genre: 'drama',
+    genre: 'horror',
     dateOfRelease: '2018',
     starring: ['Lambert', 'Watson'],
     director: 'Harrison Ford',

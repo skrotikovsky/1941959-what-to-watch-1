@@ -1,13 +1,7 @@
-//import HeadGuest from '../../pages/head-guest/head-guest';
 import MainPage from '../../pages/main-page/main-page';
-//import MovieDetails from '../../pages/movie-details/movie-details';
-//import MovieInMyList from '../../pages/movie-in-list/movie-in-list';
 import MoviePage from '../../pages/movie-page/movie-page';
-import MovieReviews from '../../pages/movie-reviews/movie-reviews';
 import Player from '../../pages/player/player';
-//import PlayerPause from '../../pages/player-pause/player-pause';
 import SignIn from '../../pages/sign-in/sign-in';
-//import SignInMess from '../../pages/sign-in-mess/sign-in-mess';
 import Page404 from '../../pages/404page/404page';
 import PrivateRoute from '../private-route/private-route';
 import React from 'react';
@@ -16,7 +10,6 @@ import {AppRoute, AuthorizationStatus} from '../../consts';
 import MyList from '../../pages/my-list/my-list';
 import {Film} from '../../types/types';
 import AddReview from '../../pages/add-review/add-review';
-import MovieDetails from '../../pages/movie-details/movie-details';
 
 const FilmData = {
   FILM_TITLE: 'The Grand Budapest Hotel',
@@ -37,9 +30,9 @@ function App(films:AppScreenProps): JSX.Element {
           <Route path={AppRoute.SignIn} element={<SignIn/>}/>
           <Route path={AppRoute.MyList} element={<PrivateRoute authorizationStatus={AuthorizationStatus.Auth}><MyList myFilms={films.films}/></PrivateRoute>}/>
           <Route path={AppRoute.Film} element={<MoviePage films={films.films}/>}/>
-          <Route path={AppRoute.Review} element={<MovieReviews films={films.films} />}/>
+          {/*<Route path={AppRoute.Review} element={<MovieReviews films={films.films} />}/>/*/}
           <Route path={AppRoute.AddReview} element={<AddReview/>}/>
-          <Route path={AppRoute.FilmDetails} element={<MovieDetails films={films.films}/>}/>
+          {/*<Route path={AppRoute.FilmDetails} element={<MovieDetails films={films.films}/>}/>*/}
           <Route path={AppRoute.Player} element={<Player/>}/>
         </Route>
         <Route path={'*'} element={<Page404/>}/>
