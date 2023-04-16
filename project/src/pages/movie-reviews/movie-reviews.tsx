@@ -46,7 +46,7 @@ function MovieReviews({films}:MovieReviewType) {
         <div className="film-card__wrap film-card__translate-top">
           <div className="film-card__info">
             <div className="film-card__poster film-card__poster--big">
-              <img src={film.posterImage} alt="The Grand Budapest Hotel poster" width={218} height={327} />
+              <img src={film.posterImage} alt={`${film.name} poster`} width={218} height={327} />
             </div>
             <div className="film-card__desc">
               <FilmNav filmID={film.id} isActive={ActiveSection.REVIEWS}/>
