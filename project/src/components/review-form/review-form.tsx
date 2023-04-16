@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 export default function ReviewForm(): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [ratingData, setRatingData] = useState(0);
+  const [ratingData, setRatingData] = useState(8);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [commentText, setCommentText] = useState('');
   return (
