@@ -1,11 +1,12 @@
 import {Film} from '../../types/types';
 import Page404 from '../404page/404page';
-import {useParams} from 'react-router-dom';
-import {ActiveSection} from '../../consts';
-import {RatingLevel} from '../../consts';
+import {Link, useParams} from 'react-router-dom';
+import {ActiveTab} from '../../consts';
 import LogoWTW from '../../components/logo-wtw/logo-wtw';
-import FilmNav from '../../components/film-nav/film-nav';
+import FilmTabs from '../../components/film-tabs/film-tabs';
 import FilmPageButtons from '../../components/film-page-buttons/film-page-buttons';
+import MoreLikeThis from '../../components/more-like-this/more-like-this';
+import {useState} from 'react';
 
 type MoviePageType = {
   films: Film[];
@@ -13,6 +14,7 @@ type MoviePageType = {
 
 function MoviePage({films}:MoviePageType): JSX.Element {
   const idFilm = useParams();
+  const [openedTab, setActiveTab] = useState(ActiveTab.OVERVIEW);
   const film = films[Number(idFilm.id) - 1];
   if (film === undefined){
     return <Page404/>;
@@ -61,24 +63,21 @@ function MoviePage({films}:MoviePageType): JSX.Element {
             </div>
 
             <div className="film-card__desc">
-              <FilmNav filmID={film.id} isActive={ActiveSection.OVERVIEW}/>
-              <div className="film-rating">
-                <div className="film-rating__score">{film.rating}</div>
-                <p className="film-rating__meta">
-                  <span className="film-rating__level">{RatingLevel(film.rating)}</span>
-                  <span className="film-rating__count">{film.countOfRatings} ratings</span>
-                </p>
-              </div>
+              <nav className="film-nav film-card__nav">
+                <ul className="film-nav__list">
+                  <li onClick={()=> setActiveTab(ActiveTab.OVERVIEW)} className={`film-nav__item ${openedTab === ActiveTab.OVERVIEW ? 'film-nav__item--active' : ''}`}>
+                    <Link className="film-nav__link" to={`/films/${film.id}`}>Overview</Link>
+                  </li>
+                  <li onClick={()=> setActiveTab(ActiveTab.DETAILS)} className={`film-nav__item ${openedTab === ActiveTab.DETAILS ? 'film-nav__item--active' : ''}`}>
+                    <Link className="film-nav__link" to={`/films/${film.id}`}>Details</Link>
+                  </li>
+                  <li onClick={()=> setActiveTab(ActiveTab.REVIEWS)} className={`film-nav__item ${openedTab === ActiveTab.REVIEWS ? 'film-nav__item--active' : ''}`}>
+                    <Link className="film-nav__link" to={`/films/${film.id}`}>Reviews</Link>
+                  </li>
+                </ul>
+              </nav>
+              <FilmTabs film={film} isActive={openedTab}/>
 
-              <div className="film-card__text">
-                <p>{film.description}
-                </p>
-                <p className="film-card__director"><strong>Director: {film.director}</strong></p>
-                <p className="film-card__starring">
-                  <strong>Starring: {`${film.starring.join(', ')} and other`}
-                  </strong>
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -87,48 +86,7 @@ function MoviePage({films}:MoviePageType): JSX.Element {
       <div className="page-content">
         <section className="catalog catalog--like-this">
           <h2 className="catalog__title">More like this</h2>
-
-          <div className="catalog__films-list">
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-                  alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175"
-                />
-              </div>
-              <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Fantastic Beasts: The Crimes of
-                  Grindelwald
-                </a>
-              </h3>
-            </article>
-
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="img/bohemian-rhapsody.jpg" alt="Bohemian Rhapsody" width="280" height="175"/>
-              </div>
-              <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Bohemian Rhapsody</a>
-              </h3>
-            </article>
-
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="img/macbeth.jpg" alt="Macbeth" width="280" height="175"/>
-              </div>
-              <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Macbeth</a>
-              </h3>
-            </article>
-
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="img/aviator.jpg" alt="Aviator" width="280" height="175"/>
-              </div>
-              <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Aviator</a>
-              </h3>
-            </article>
-          </div>
+          <MoreLikeThis films={films} film={film}/>
         </section>
 
         <footer className="page-footer">
