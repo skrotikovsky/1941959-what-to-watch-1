@@ -8,7 +8,7 @@ import React from 'react';
 import {BrowserRouter, Route, Routes,} from 'react-router-dom';
 import {AppRoute, AuthorizationStatus} from '../../consts';
 import MyList from '../../pages/my-list/my-list';
-import {Film} from '../../types/types';
+import {Film} from '../../types/film';
 import AddReview from '../../pages/add-review/add-review';
 
 const FilmData = {

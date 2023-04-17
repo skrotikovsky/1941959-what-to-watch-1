@@ -1,4 +1,4 @@
-import {Film} from '../../types/types';
+import {Film} from '../../types/film';
 import FilmList from '../film-list/film-list';
 
 type FilmGenre = {
