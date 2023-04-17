@@ -33,7 +33,7 @@ export enum ActiveTab {
   REVIEWS = 'reviews'
 }
 
-export enum Genres {
+export enum Genre {
   ALL_GENRES = 'All Genres',
   COMEDY = 'Comedy',
   CRIME = 'Crime',

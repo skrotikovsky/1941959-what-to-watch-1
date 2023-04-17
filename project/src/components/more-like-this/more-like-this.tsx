@@ -13,6 +13,6 @@ export default function MoreLikeThis({film, films}: FilmGenre): JSX.Element {
 
   return (
     <div className="catalog__films-list">
-      <FilmList films={genreArr}/>
+      <FilmList films={genreArr} countFilmsToSHow={4}/>
     </div>);
 }

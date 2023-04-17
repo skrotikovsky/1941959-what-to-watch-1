@@ -6,6 +6,7 @@ import GenreFilter from '../../components/genre-filter/genre-filter';
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {useEffect} from 'react';
 import {loadFilmsByGenre} from '../../store/action';
+import ShowMore from '../../components/show-more/show-more';
 
 type MainPageProps = {
   filmName: string;
@@ -18,6 +19,7 @@ function MainPage({filmName,filmGenre,filmReleaseDate, films}:MainPageProps): JS
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const genre = useAppSelector((state) => state.genre);
+  const countOfFilms = useAppSelector((state) => state.countFilmsToShow);
   const filmsByGenre = useAppSelector((state) => state.films);
   useEffect(()=>{
     dispatch(loadFilmsByGenre());
@@ -96,13 +98,9 @@ function MainPage({filmName,filmGenre,filmReleaseDate, films}:MainPageProps): JS
           <h2 className="catalog__title visually-hidden">Catalog</h2>
           <GenreFilter/>
           <div className="catalog__films-list">
-            <FilmList films={filmsByGenre}/>
+            <FilmList films={filmsByGenre} countFilmsToSHow={countOfFilms}/>
           </div>
-          <div className="catalog__more">
-            <button className="catalog__button" type="button">
-              Show more
-            </button>
-          </div>
+          {(filmsByGenre.length > countOfFilms) && <ShowMore/>}
         </section>
         <footer className="page-footer">
           <div className="logo">
