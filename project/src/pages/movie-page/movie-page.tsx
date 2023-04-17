@@ -1,4 +1,4 @@
-import {Film} from '../../types/types';
+import {Film} from '../../types/film';
 import Page404 from '../404page/404page';
 import {Link, useParams} from 'react-router-dom';
 import {ActiveTab} from '../../consts';

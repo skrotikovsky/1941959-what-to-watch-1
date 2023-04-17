@@ -1,4 +1,4 @@
-import {Film} from '../../types/types';
+import {Film} from '../../types/film';
 import FilmList from '../../components/film-list/film-list';
 import {Link} from 'react-router-dom';
 import {AppRoute} from '../../consts';

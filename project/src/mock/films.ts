@@ -1,9 +1,9 @@
-import {Film} from '../types/types';
+import {Film} from '../types/film';
 export const films: Film[] = [
   {
     id: '1',
     name: 'Fantastic Beasts: The Crimes of Grindelwald',
-    genre: 'fantasy',
+    genre: 'Crime',
     dateOfRelease: '2017',
     starring: ['Lambert', 'Watson'],
     director: 'Harrison Ford',
@@ -19,7 +19,7 @@ export const films: Film[] = [
   {
     id: '2',
     name: 'Bohemian Rhapsody',
-    genre: 'fantasy',
+    genre: 'Crime',
     dateOfRelease: '2018',
     starring: ['Gerald', 'Watson'],
     director: 'Tomas Ford',
@@ -35,7 +35,7 @@ export const films: Film[] = [
   {
     id: '3',
     name: 'Macbeth',
-    genre: 'fantasy',
+    genre: 'Documentary',
     dateOfRelease: '2016',
     starring: ['Lexus', 'Manes'],
     director: 'Tim Burton',
@@ -51,7 +51,7 @@ export const films: Film[] = [
   {
     id: '4',
     name: 'Aviator',
-    genre: 'thriller',
+    genre: 'Documentary',
     dateOfRelease: '2013',
     starring: ['Lambert', 'Watson'],
     director: 'Harrison Ford',
@@ -67,7 +67,7 @@ export const films: Film[] = [
   {
     id: '5',
     name: 'We need to talk about Kevin',
-    genre: 'thriller',
+    genre: 'Horror',
     dateOfRelease: '2015',
     starring: ['Garden', 'Kovsky', 'Sand', 'Murray', 'Gaoz'],
     director: 'Steven Spilberg',
@@ -83,7 +83,7 @@ export const films: Film[] = [
   {
     id: '6',
     name: 'What We Do in the Shadows',
-    genre: 'thriller',
+    genre: 'Horror',
     dateOfRelease: '2018',
     starring: ['Lambert', 'Watson'],
     director: 'Harrison Ford',
@@ -99,7 +99,7 @@ export const films: Film[] = [
   {
     id: '7',
     name: 'Revenant',
-    genre: 'horror',
+    genre: 'Romance',
     dateOfRelease: '2018',
     starring: ['Lambert', 'Watson'],
     director: 'Harrison Ford',
@@ -115,7 +115,7 @@ export const films: Film[] = [
   {
     id: '8',
     name: 'Johnny English',
-    genre: 'horror',
+    genre: 'Sci-fi',
     dateOfRelease: '2018',
     starring: ['Lambert', 'Watson'],
     director: 'Harrison Ford',

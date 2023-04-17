@@ -1,5 +1,5 @@
 import {ActiveTab, RatingLevel} from '../../consts';
-import {Film} from '../../types/types';
+import {Film} from '../../types/film';
 
 type FilmNavProp = {
   isActive: string;

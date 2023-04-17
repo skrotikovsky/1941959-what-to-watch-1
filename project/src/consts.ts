@@ -9,10 +9,8 @@ export enum AppRoute {
   SignIn = '/login',
   MyList = '/mylist',
   Film = '/films/:id',
-  Review = '/films/:id/review',
   Player = '/player',
   AddReview = '/films/:id/addreview',
-  FilmDetails = '/films/:id/details',
 }
 
 export function RatingLevel(rating: string): string{
@@ -33,4 +31,17 @@ export enum ActiveTab {
   OVERVIEW= 'overview',
   DETAILS = 'details',
   REVIEWS = 'reviews'
+}
+
+export enum Genres {
+  ALL_GENRES = 'All Genres',
+  COMEDY = 'Comedy',
+  CRIME = 'Crime',
+  DOCUMENTARY = 'Documentary',
+  DRAMA = 'Drama',
+  HORROR = 'Horror',
+  KIDS_AND_FAMILY = 'Kids & Family',
+  ROMANCE = 'Romance',
+  SCI_FI = 'Sci-fi',
+  THRILLER = 'Thriller',
 }
