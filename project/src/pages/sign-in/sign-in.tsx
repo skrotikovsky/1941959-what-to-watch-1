@@ -3,11 +3,8 @@ import {FormEvent, useRef} from 'react';
 import {AuthData} from '../../types/auth-data';
 import {useAppDispatch} from '../../hooks';
 import {loginAction} from '../../store/api-actions';
-import {useNavigate} from 'react-router-dom';
-import {AppRoute} from '../../consts';
 
 function SignIn(): JSX.Element {
-  const navigate = useNavigate();
   const email = useRef<HTMLInputElement | null>(null);
   const password = useRef<HTMLInputElement | null>(null);
   const dispatch = useAppDispatch();

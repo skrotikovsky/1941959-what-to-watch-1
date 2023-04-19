@@ -1,4 +1,4 @@
-import LogoWTW from "../../components/logo-wtw/logo-wtw";
+import LogoWTW from '../../components/logo-wtw/logo-wtw';
 
 function MovieInMyList() {
   return (
