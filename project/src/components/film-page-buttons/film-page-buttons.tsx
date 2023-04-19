@@ -2,7 +2,7 @@ import {AppRoute} from '../../consts';
 import {useNavigate} from 'react-router-dom';
 
 type FilmButtonsProps = {
-  filmID: string;
+  filmID: number;
 }
 export default function FilmPageButtons({filmID}: FilmButtonsProps): JSX.Element {
   const navigate = useNavigate();

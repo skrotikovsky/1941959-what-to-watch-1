@@ -13,15 +13,14 @@ export enum AppRoute {
   AddReview = '/films/:id/addreview',
 }
 
-export function RatingLevel(rating: string): string{
-  const rate = Number(rating);
-  if (rate >= 9) {
+export function RatingLevel(rating: number): string{
+  if (rating >= 9) {
     return 'Very good';
   }
-  if (rate >= 7) {
+  if (rating >= 7) {
     return 'Good';
   }
-  if (rate >= 5) {
+  if (rating >= 5) {
     return 'Ok';
   }
   return 'Bad';
@@ -44,4 +43,9 @@ export enum Genre {
   ROMANCE = 'Romance',
   SCI_FI = 'Sci-fi',
   THRILLER = 'Thriller',
+}
+
+export enum APIRoute {
+  getFilms = '/films',
+  getPromo = '/promo'
 }
