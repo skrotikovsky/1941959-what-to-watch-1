@@ -1,12 +1,14 @@
 import {useNavigate} from 'react-router-dom';
 import FilmList from '../../components/film-list/film-list';
-import {AppRoute} from '../../consts';
+import {AppRoute, AuthorizationStatus} from '../../consts';
 import GenreFilter from '../../components/genre-filter/genre-filter';
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {useEffect} from 'react';
 import {loadFilmsByGenre} from '../../store/action';
 import ShowMore from '../../components/show-more/show-more';
 import LoadingScreen from '../../components/loading-screen/loading-screen';
+import HeadGuest from '../../components/head-guest/head-guest';
+import HeadAuthorized from '../../components/head-authorized/head-authorized';
 
 type MainPageProps = {
   filmName: string;
@@ -21,6 +23,9 @@ function MainPage({filmName,filmGenre,filmReleaseDate}:MainPageProps): JSX.Eleme
   const genre = useAppSelector((state) => state.genre);
   const countOfFilms = useAppSelector((state) => state.countFilmsToShow);
   const filmsByGenre = useAppSelector((state) => state.films);
+  const authorizationStatus = useAppSelector((state) => state.authorizationStatus);
+  const promoFilm = useAppSelector((state) => state.promoFilm);
+
   useEffect(()=>{
     dispatch(loadFilmsByGenre());
   },[genre]);
@@ -29,8 +34,8 @@ function MainPage({filmName,filmGenre,filmReleaseDate}:MainPageProps): JSX.Eleme
       <section className="film-card">
         <div className="film-card__bg">
           <img
-            src="img/bg-the-grand-budapest-hotel.jpg"
-            alt="The Grand Budapest Hotel"
+            src={promoFilm.backgroundImage}
+            alt={promoFilm.name}
           />
         </div>
         <h1 className="visually-hidden">WTW</h1>
@@ -42,37 +47,25 @@ function MainPage({filmName,filmGenre,filmReleaseDate}:MainPageProps): JSX.Eleme
               <span className="logo__letter logo__letter--3">W</span>
             </a>
           </div>
-          <ul className="user-block">
-            <li className="user-block__item">
-              <div className="user-block__avatar">
-                <img
-                  src="img/avatar.jpg"
-                  alt="User avatar"
-                  width={63}
-                  height={63}
-                />
-              </div>
-            </li>
-            <li className="user-block__item">
-              <a className="user-block__link">Sign out</a>
-            </li>
-          </ul>
+          {authorizationStatus === AuthorizationStatus.Unknown || authorizationStatus === AuthorizationStatus.NoAuth
+            ? <HeadGuest/>
+            : <HeadAuthorized/>}
         </header>
         <div className="film-card__wrap">
           <div className="film-card__info">
             <div className="film-card__poster">
               <img
-                src="img/the-grand-budapest-hotel-poster.jpg"
-                alt="The Grand Budapest Hotel poster"
+                src={promoFilm.posterImage}
+                alt={`${promoFilm.name} poster`}
                 width={218}
                 height={327}
               />
             </div>
             <div className="film-card__desc">
-              <h2 className="film-card__title">{filmName}</h2>
+              <h2 className="film-card__title">{promoFilm.name}</h2>
               <p className="film-card__meta">
-                <span className="film-card__genre">{filmGenre}</span>
-                <span className="film-card__year">{filmReleaseDate}</span>
+                <span className="film-card__genre">{promoFilm.genre}</span>
+                <span className="film-card__year">{promoFilm.released}</span>
               </p>
               <div className="film-card__buttons">
                 <button onClick={()=>navigate(AppRoute.Player)} className="btn btn--play film-card__button" type="button">

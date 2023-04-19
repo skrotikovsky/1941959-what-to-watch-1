@@ -10,7 +10,7 @@ function AddReview() {
         </div>
         <h1 className="visually-hidden">WTW</h1>
         <header className="page-header">
-          <LogoWTW isLight={false}/>
+          <LogoWTW isLight/>
           <nav className="breadcrumbs">
             <ul className="breadcrumbs__list">
               <li className="breadcrumbs__item">

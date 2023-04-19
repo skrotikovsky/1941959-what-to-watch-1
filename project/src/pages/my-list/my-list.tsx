@@ -1,33 +1,22 @@
 import FilmList from '../../components/film-list/film-list';
-import {Link} from 'react-router-dom';
-import {AppRoute} from '../../consts';
 import LogoWTW from '../../components/logo-wtw/logo-wtw';
 import {useAppSelector} from '../../hooks';
+import HeadAuthorized from '../../components/head-authorized/head-authorized';
+import {AuthorizationStatus} from '../../consts';
+import HeadGuest from '../../components/head-guest/head-guest';
 
 function MyList(): JSX.Element {
+  const authorizationStatus = useAppSelector((state) => state.authorizationStatus);
   const myFilms = useAppSelector((state) => state.films);
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
-        <div className="logo">
-          <Link to={AppRoute.Main} className="logo__link">
-            <span className="logo__letter logo__letter--1">W</span>
-            <span className="logo__letter logo__letter--2">T</span>
-            <span className="logo__letter logo__letter--3">W</span>
-          </Link>
-        </div>
+        <LogoWTW isLight/>
 
         <h1 className="page-title user-page__title">My list <span className="user-page__film-count">9</span></h1>
-        <ul className="user-block">
-          <li className="user-block__item">
-            <div className="user-block__avatar">
-              <img src="img/avatar.jpg" alt="User avatar" width="63" height="63"/>
-            </div>
-          </li>
-          <li className="user-block__item">
-            <a className="user-block__link">Sign out</a>
-          </li>
-        </ul>
+        {authorizationStatus === AuthorizationStatus.Unknown || authorizationStatus === AuthorizationStatus.NoAuth
+          ? <HeadGuest/>
+          : <HeadAuthorized/>}
       </header>
 
       <section className="catalog">
@@ -39,7 +28,7 @@ function MyList(): JSX.Element {
       </section>
 
       <footer className="page-footer">
-        <LogoWTW isLight/>
+        <LogoWTW isLight={false}/>
 
         <div className="copyright">
           <p>© 2019 What to watch Ltd.</p>
