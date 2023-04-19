@@ -1,13 +1,11 @@
-import {Film} from '../../types/film';
 import FilmList from '../../components/film-list/film-list';
 import {Link} from 'react-router-dom';
 import {AppRoute} from '../../consts';
 import LogoWTW from '../../components/logo-wtw/logo-wtw';
+import {useAppSelector} from '../../hooks';
 
-type MyListProps = {
-  myFilms: Film[];
-}
-function MyList({myFilms}:MyListProps): JSX.Element {
+function MyList(): JSX.Element {
+  const myFilms = useAppSelector((state) => state.films);
   return (
     <div className="user-page">
       <header className="page-header user-page__head">

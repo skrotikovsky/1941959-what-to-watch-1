@@ -1,4 +1,3 @@
-import {Film} from '../../types/film';
 import Page404 from '../404page/404page';
 import {Link, useParams} from 'react-router-dom';
 import {ActiveTab} from '../../consts';
@@ -7,12 +6,10 @@ import FilmTabs from '../../components/film-tabs/film-tabs';
 import FilmPageButtons from '../../components/film-page-buttons/film-page-buttons';
 import MoreLikeThis from '../../components/more-like-this/more-like-this';
 import {useState} from 'react';
+import {useAppSelector} from '../../hooks';
 
-type MoviePageType = {
-  films: Film[];
-}
-
-function MoviePage({films}:MoviePageType): JSX.Element {
+function MoviePage(): JSX.Element {
+  const films = useAppSelector((state) => state.films);
   const idFilm = useParams();
   const [openedTab, setActiveTab] = useState(ActiveTab.OVERVIEW);
   const film = films[Number(idFilm.id) - 1];
@@ -49,7 +46,7 @@ function MoviePage({films}:MoviePageType): JSX.Element {
               <h2 className="film-card__title">{film.name}</h2>
               <p className="film-card__meta">
                 <span className="film-card__genre">{film.genre}</span>
-                <span className="film-card__year">{film.dateOfRelease}</span>
+                <span className="film-card__year">{film.released}</span>
               </p>
               <FilmPageButtons filmID={film.id}/>
             </div>

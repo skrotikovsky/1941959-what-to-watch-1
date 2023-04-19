@@ -100,7 +100,7 @@ export default function FilmTabs({isActive, film}: FilmNavProp): JSX.Element {
             </p>
             <p className="film-card__details-item">
               <strong className="film-card__details-name">Released</strong>
-              <span className="film-card__details-value">{film.dateOfRelease}</span>
+              <span className="film-card__details-value">{film.released}</span>
             </p>
           </div>
         </div>}
@@ -110,7 +110,7 @@ export default function FilmTabs({isActive, film}: FilmNavProp): JSX.Element {
             <div className="film-rating__score">{film.rating}</div>
             <p className="film-rating__meta">
               <span className="film-rating__level">{RatingLevel(film.rating)}</span>
-              <span className="film-rating__count">{film.countOfRatings} ratings</span>
+              <span className="film-rating__count">{film.scoresCount} ratings</span>
             </p>
           </div>
 

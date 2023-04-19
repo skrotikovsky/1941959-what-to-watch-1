@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
-import {films} from './mock/films';
 import {Provider} from 'react-redux';
 import {store} from './store';
+import {fetchFilmsAction} from './store/api-actions';
+
+
+store.dispatch(fetchFilmsAction());
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
@@ -11,7 +15,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App films={films}/>
+      <App/>
     </Provider>
   </React.StrictMode>,
 );

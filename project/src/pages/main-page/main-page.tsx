@@ -1,5 +1,4 @@
 import {useNavigate} from 'react-router-dom';
-import {Film} from '../../types/film';
 import FilmList from '../../components/film-list/film-list';
 import {AppRoute} from '../../consts';
 import GenreFilter from '../../components/genre-filter/genre-filter';
@@ -7,17 +6,18 @@ import {useAppDispatch, useAppSelector} from '../../hooks';
 import {useEffect} from 'react';
 import {loadFilmsByGenre} from '../../store/action';
 import ShowMore from '../../components/show-more/show-more';
+import LoadingScreen from '../../components/loading-screen/loading-screen';
 
 type MainPageProps = {
   filmName: string;
   filmGenre: string;
   filmReleaseDate: string;
-  films:Film[];
 }
 
-function MainPage({filmName,filmGenre,filmReleaseDate, films}:MainPageProps): JSX.Element {
+function MainPage({filmName,filmGenre,filmReleaseDate}:MainPageProps): JSX.Element {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
+  const loadingData = useAppSelector((state) => state.dataLoaded);
   const genre = useAppSelector((state) => state.genre);
   const countOfFilms = useAppSelector((state) => state.countFilmsToShow);
   const filmsByGenre = useAppSelector((state) => state.films);
@@ -97,6 +97,7 @@ function MainPage({filmName,filmGenre,filmReleaseDate, films}:MainPageProps): JS
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
           <GenreFilter/>
+          {loadingData && <LoadingScreen/>}
           <div className="catalog__films-list">
             <FilmList films={filmsByGenre} countFilmsToSHow={countOfFilms}/>
           </div>
