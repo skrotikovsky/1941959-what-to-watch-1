@@ -1,3 +1,5 @@
+import LogoWTW from '../../components/logo-wtw/logo-wtw';
+
 function MovieInMyList() {
   return (
     <>
@@ -8,13 +10,7 @@ function MovieInMyList() {
           </div>
           <h1 className="visually-hidden">WTW</h1>
           <header className="page-header film-card__head">
-            <div className="logo">
-              <a href="main.html" className="logo__link">
-                <span className="logo__letter logo__letter--1">W</span>
-                <span className="logo__letter logo__letter--2">T</span>
-                <span className="logo__letter logo__letter--3">W</span>
-              </a>
-            </div>
+            <LogoWTW isLight/>
             <ul className="user-block">
               <li className="user-block__item">
                 <div className="user-block__avatar">
@@ -128,11 +124,7 @@ function MovieInMyList() {
         </section>
         <footer className="page-footer">
           <div className="logo">
-            <a href="main.html" className="logo__link logo__link--light">
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
+            <LogoWTW isLight={false}/>
           </div>
           <div className="copyright">
             <p>© 2019 What to watch Ltd.</p>

@@ -1,44 +1,41 @@
-import Page404 from '../404page/404page';
 import {Link, useParams} from 'react-router-dom';
-import {ActiveTab} from '../../consts';
+import {ActiveTab, AuthorizationStatus} from '../../consts';
 import LogoWTW from '../../components/logo-wtw/logo-wtw';
 import FilmTabs from '../../components/film-tabs/film-tabs';
 import FilmPageButtons from '../../components/film-page-buttons/film-page-buttons';
 import MoreLikeThis from '../../components/more-like-this/more-like-this';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useAppSelector} from '../../hooks';
+import {store} from '../../store';
+import {fetchSingleFilm} from '../../store/api-actions';
+import HeadGuest from '../../components/head-guest/head-guest';
+import HeadAuthorized from '../../components/head-authorized/head-authorized';
 
 function MoviePage(): JSX.Element {
+  const authorizationStatus = useAppSelector((state) => state.authorizationStatus);
   const films = useAppSelector((state) => state.films);
-  const idFilm = useParams();
+  const idFilm = Number(useParams().id);
+  const film = useAppSelector((state) => state.film);
   const [openedTab, setActiveTab] = useState(ActiveTab.OVERVIEW);
-  const film = films[Number(idFilm.id) - 1];
-  if (film === undefined){
-    return <Page404/>;
-  }
+  useEffect(() => {
+    store.dispatch(fetchSingleFilm(idFilm));
+  }, [idFilm]);
   return(
     <>
       <section className="film-card film-card--full">
         <div className="film-card__hero">
           <div className="film-card__bg">
-            <img src={film.posterImage} alt={film.name}/>
+            <img src={film.backgroundImage} alt={film.name}/>
           </div>
 
           <h1 className="visually-hidden">WTW</h1>
 
           <header className="page-header film-card__head">
-            <LogoWTW isLight={false}/>
+            <LogoWTW isLight/>
 
-            <ul className="user-block">
-              <li className="user-block__item">
-                <div className="user-block__avatar">
-                  <img src="img/avatar.jpg" alt="User avatar" width="63" height="63"/>
-                </div>
-              </li>
-              <li className="user-block__item">
-                <a className="user-block__link">Sign out</a>
-              </li>
-            </ul>
+            {authorizationStatus === AuthorizationStatus.Unknown || authorizationStatus === AuthorizationStatus.NoAuth
+              ? <HeadGuest/>
+              : <HeadAuthorized/>}
           </header>
 
           <div className="film-card__wrap">
@@ -87,7 +84,7 @@ function MoviePage(): JSX.Element {
         </section>
 
         <footer className="page-footer">
-          <LogoWTW isLight/>
+          <LogoWTW isLight={false}/>
           <div className="copyright">
             <p>© 2019 What to watch Ltd.</p>
           </div>

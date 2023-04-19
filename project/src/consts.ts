@@ -46,6 +46,8 @@ export enum Genre {
 }
 
 export enum APIRoute {
-  getFilms = '/films',
-  getPromo = '/promo'
+  Films = '/films',
+  Login = '/login',
+  Logout = '/logout',
+  Promo = '/promo',
 }

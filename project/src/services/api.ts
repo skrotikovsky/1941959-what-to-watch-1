@@ -11,11 +11,12 @@ export const createAPI = (): AxiosInstance => {
   });
   api.interceptors.request.use((config : AxiosRequestConfig) => {
     const token = getToken();
-
+    /* eslint-disable */
     if (token) {
       // @ts-ignore
       config.headers['x-token'] = token;
     }
+    /* eslint-enable */
     return config;
   });
   return api;
