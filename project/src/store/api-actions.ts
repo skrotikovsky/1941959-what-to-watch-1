@@ -2,13 +2,23 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 import {AppDispatch, State} from '../types/state';
 import {AxiosInstance} from 'axios';
 import {Films} from '../types/films';
-import {loadFilms, loadPromoFilm, loadSingleFilm, setAuthorization, toggleDataLoading} from './action';
-import {APIRoute} from '../consts';
+import {
+  loadComments,
+  loadFilms,
+  loadPromoFilm,
+  loadSingleFilm,
+  redirectToRoute,
+  sendComment,
+  setAuthorization,
+  toggleDataLoading
+} from './action';
+import {APIRoute, AppRoute, AuthorizationStatus} from '../consts';
 import {AuthData} from '../types/auth-data';
 import {UserData} from '../types/user-data';
-import {AuthorizationStatus} from '../consts';
 import {removeToken, setToken} from '../services/token';
 import {Film} from '../types/film';
+import {Comment, CommentData} from '../types/comment';
+import {Reviews} from '../types/review';
 
 export const fetchFilmsAction = createAsyncThunk<void, undefined, {
   dispatch: AppDispatch;
@@ -50,6 +60,7 @@ export const loginAction = createAsyncThunk<void, AuthData, {
     const {data: {token}} = await api.post<UserData>(APIRoute.Login, {email, password});
     setToken(token);
     dispatch(setAuthorization(AuthorizationStatus.Auth));
+    dispatch(redirectToRoute(AppRoute.Main));
   },
 );
 
@@ -85,8 +96,35 @@ export const fetchSingleFilm = createAsyncThunk<void, number, {
 }>(
   'data/fetchFilm',
   async (id, {dispatch, extra: api}) => {
-    const {data} = await api.get<Film>(`${APIRoute.Films}/${id}`);
-    dispatch(loadSingleFilm(data));
-
+    try {
+      const {data} = await api.get<Film>(`${APIRoute.Films}/${id}`);
+      dispatch(loadSingleFilm(data));}
+    catch {
+      dispatch(redirectToRoute(AppRoute.Page404));
+    }
   },
+);
+
+export const sendCommentAction = createAsyncThunk<void, Comment, {
+  dispatch: AppDispatch;
+  state: State;
+  extra: AxiosInstance;
+}>(
+  'user/sendComment',
+  async ({id: filmId, data:{comment, rating}}, {dispatch, extra: api}) => {
+    const {data} = await api.post<CommentData>(`${APIRoute.Comments}/${filmId}`, {comment, rating});
+    dispatch(sendComment(data));
+  },
+);
+
+export const fetchCommentsAction = createAsyncThunk<void, number, {
+  dispatch: AppDispatch;
+  state: State;
+  extra: AxiosInstance;
+}>(
+  'data/loadComments',
+  async (id,{dispatch, extra: api}) => {
+    const {data} = await api.get<Reviews>(`${APIRoute.Comments}/${id}`);
+    dispatch(loadComments(data));
+  }
 );

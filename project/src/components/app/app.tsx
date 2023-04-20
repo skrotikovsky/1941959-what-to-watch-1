@@ -5,12 +5,14 @@ import SignIn from '../../pages/sign-in/sign-in';
 import Page404 from '../../pages/404page/404page';
 import PrivateRoute from '../private-route/private-route';
 import React from 'react';
-import {BrowserRouter, Route, Routes,} from 'react-router-dom';
+import {Route, Routes,} from 'react-router-dom';
 import {AppRoute} from '../../consts';
 import MyList from '../../pages/my-list/my-list';
 import AddReview from '../../pages/add-review/add-review';
 import {useAppSelector} from '../../hooks';
 import HeadGuest from '../head-guest/head-guest';
+import HistoryRouter from '../history-router/history-router';
+import browserHistory from '../../browser-history';
 
 const FilmData = {
   FILM_TITLE: 'The Grand Budapest Hotel',
@@ -21,7 +23,7 @@ const FilmData = {
 function App(): JSX.Element {
   const authorizationStatus = useAppSelector((state) => state.authorizationStatus);
   return (
-    <BrowserRouter>
+    <HistoryRouter history={browserHistory}>
       <Routes>
         <Route path={AppRoute.Main}>
           <Route index element={<MainPage filmName = {FilmData.FILM_TITLE} filmGenre = {FilmData.FILM_GENRE} filmReleaseDate = {FilmData.FILM_YEAR}/>}/>
@@ -34,7 +36,7 @@ function App(): JSX.Element {
         </Route>
         <Route path={'*'} element={<Page404/>}/>
       </Routes>
-    </BrowserRouter>);
+    </HistoryRouter>);
 }
 
 export default App;

@@ -11,6 +11,7 @@ export enum AppRoute {
   Film = '/films/:id',
   Player = '/player',
   AddReview = '/films/:id/addreview',
+  Page404 = '/*',
 }
 
 export function RatingLevel(rating: number): string{
@@ -50,4 +51,5 @@ export enum APIRoute {
   Login = '/login',
   Logout = '/logout',
   Promo = '/promo',
+  Comments = '/comments'
 }
