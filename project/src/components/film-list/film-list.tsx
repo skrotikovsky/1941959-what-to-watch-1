@@ -1,8 +1,8 @@
-import {Film} from '../../types/film';
+import {Films} from '../../types/films';
 import FilmCard from '../film-card/film-card';
 
 type FilmListProps ={
-  films: Film[];
+  films: Films;
   countFilmsToSHow: number;
 }
 export default function FilmList ({films, countFilmsToSHow}:FilmListProps): JSX.Element{

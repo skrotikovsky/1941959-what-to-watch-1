@@ -1,12 +1,21 @@
-import {useState} from 'react';
+import {FormEvent, useState} from 'react';
+import {useNavigate, useParams} from 'react-router-dom';
+import {useAppDispatch} from '../../hooks';
+import {sendCommentAction} from '../../store/api-actions';
 
 export default function ReviewForm(): JSX.Element {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const navigate = useNavigate();
   const [ratingData, setRatingData] = useState(8);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [commentText, setCommentText] = useState('');
+  const idFilm = Number(useParams().id);
+  const dispatch = useAppDispatch();
   return (
-    <form action="#" className="add-review__form">
+    <form onSubmit={(evt:FormEvent<HTMLFormElement>) =>{
+      evt.preventDefault();
+      dispatch(sendCommentAction({id: idFilm, data:{comment: commentText, rating: ratingData}}));
+      navigate(`/films/${idFilm}`);
+    }} action="#" className="add-review__form"
+    >
       <div className="rating">
         <div className="rating__stars">
           <input onClick={(evt)=>{setRatingData(Number(evt.currentTarget.value));}} className="rating__input" id="star-10" type="radio" name="rating" defaultValue={10} />

@@ -7,18 +7,20 @@ import MoreLikeThis from '../../components/more-like-this/more-like-this';
 import {useEffect, useState} from 'react';
 import {useAppSelector} from '../../hooks';
 import {store} from '../../store';
-import {fetchSingleFilm} from '../../store/api-actions';
+import {fetchCommentsAction, fetchSingleFilm} from '../../store/api-actions';
 import HeadGuest from '../../components/head-guest/head-guest';
 import HeadAuthorized from '../../components/head-authorized/head-authorized';
 
 function MoviePage(): JSX.Element {
   const authorizationStatus = useAppSelector((state) => state.authorizationStatus);
   const films = useAppSelector((state) => state.films);
+  const reviews = useAppSelector((state) => state.reviews);
   const idFilm = Number(useParams().id);
   const film = useAppSelector((state) => state.film);
   const [openedTab, setActiveTab] = useState(ActiveTab.OVERVIEW);
   useEffect(() => {
     store.dispatch(fetchSingleFilm(idFilm));
+    store.dispatch(fetchCommentsAction(idFilm));
   }, [idFilm]);
   return(
     <>
@@ -70,7 +72,7 @@ function MoviePage(): JSX.Element {
                   </li>
                 </ul>
               </nav>
-              <FilmTabs film={film} isActive={openedTab}/>
+              <FilmTabs film={film} isActive={openedTab} reviews={reviews}/>
 
             </div>
           </div>

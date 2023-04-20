@@ -1,11 +1,13 @@
-import {AppRoute} from '../../consts';
+import {AppRoute, AuthorizationStatus} from '../../consts';
 import {useNavigate} from 'react-router-dom';
+import {useAppSelector} from '../../hooks';
 
 type FilmButtonsProps = {
   filmID: number;
 }
 export default function FilmPageButtons({filmID}: FilmButtonsProps): JSX.Element {
   const navigate = useNavigate();
+  const isAuth = useAppSelector((state) => state.authorizationStatus);
   return (
     <div className="film-card__buttons">
       <button onClick={()=>navigate(`${AppRoute.Player}`)} className="btn btn--play film-card__button" type="button">
@@ -21,7 +23,7 @@ export default function FilmPageButtons({filmID}: FilmButtonsProps): JSX.Element
         <span>My list</span>
         <span className="film-card__count">9</span>
       </button>
-      <a href={`/films/${filmID}/addreview`} className="btn film-card__button">Add review</a>
+      {(isAuth === AuthorizationStatus.Auth) && <a href={`/films/${filmID}/addreview`} className="btn film-card__button">Add review</a>}
     </div>
   );
 }

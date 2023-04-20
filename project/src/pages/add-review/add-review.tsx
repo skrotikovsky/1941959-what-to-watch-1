@@ -1,12 +1,22 @@
 import ReviewForm from '../../components/review-form/review-form';
 import LogoWTW from '../../components/logo-wtw/logo-wtw';
+import {useAppSelector} from '../../hooks';
+import {useEffect} from 'react';
+import {store} from '../../store';
+import {fetchSingleFilm} from '../../store/api-actions';
+import {useParams} from 'react-router-dom';
 
 function AddReview() {
+  const film = useAppSelector((state) => state.film);
+  const idFilm = Number(useParams().id);
+  useEffect(()=> {
+    store.dispatch(fetchSingleFilm(idFilm));
+  });
   return (
     <section className="film-card film-card--full">
       <div className="film-card__header">
         <div className="film-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt="The Grand Budapest Hotel" />
+          <img src={film.backgroundImage} alt={film.name} />
         </div>
         <h1 className="visually-hidden">WTW</h1>
         <header className="page-header">
@@ -14,7 +24,7 @@ function AddReview() {
           <nav className="breadcrumbs">
             <ul className="breadcrumbs__list">
               <li className="breadcrumbs__item">
-                <a href="film-page.html" className="breadcrumbs__link">The Grand Budapest Hotel</a>
+                <a href="film-page.html" className="breadcrumbs__link">{film.name}</a>
               </li>
               <li className="breadcrumbs__item">
                 <a className="breadcrumbs__link">Add review</a>
@@ -33,7 +43,7 @@ function AddReview() {
           </ul>
         </header>
         <div className="film-card__poster film-card__poster--small">
-          <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster" width={218} height={327} />
+          <img src={film.posterImage} alt={`${film.name} poster`} width={218} height={327} />
         </div>
       </div>
       <div className="add-review">
