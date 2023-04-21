@@ -9,7 +9,7 @@ export enum AppRoute {
   SignIn = '/login',
   MyList = '/mylist',
   Film = '/films/:id',
-  Player = '/player',
+  Player = '/player/:id',
   AddReview = '/films/:id/addreview',
   Page404 = '/*',
 }
@@ -51,7 +51,8 @@ export enum APIRoute {
   Login = '/login',
   Logout = '/logout',
   Promo = '/promo',
-  Comments = '/comments'
+  Comments = '/comments',
+  MyFilms = '/favorite',
 }
 
 export enum NameSpace {

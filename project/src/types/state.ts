@@ -8,6 +8,7 @@ export type AppDispatch = typeof store.dispatch;
 
 export type UserProcess = {
   authorizationStatus: AuthorizationStatus;
+  myList: Films;
 };
 
 export type FilmsData = {

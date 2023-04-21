@@ -35,6 +35,40 @@ export const fetchSimilarFilms = createAsyncThunk<Films, number, {
   }
 );
 
+export const fetchMyFilms = createAsyncThunk<Films, undefined, {
+  dispatch: AppDispatch;
+  state: State;
+  extra: AxiosInstance;
+}>(
+  'data/fetchMyFilms',
+  async (_arg,{dispatch, extra: api}) => {
+    const {data} = await api.get<Films>(`${APIRoute.MyFilms}`);
+    return data;
+  }
+);
+
+export const setFavoriteFilm = createAsyncThunk<void, number, {
+  dispatch: AppDispatch;
+  state: State;
+  extra: AxiosInstance;
+}>(
+  'data/setFavoriteFilm',
+  async (id, {dispatch, extra: api}) => {
+    await api.post<CommentData>(`${APIRoute.MyFilms}/${id}/1`);
+  },
+);
+
+export const removeFavoriteFilm = createAsyncThunk<void, number, {
+  dispatch: AppDispatch;
+  state: State;
+  extra: AxiosInstance;
+}>(
+  'data/removeFavoriteFilm',
+  async (id, {dispatch, extra: api}) => {
+    await api.post<CommentData>(`${APIRoute.MyFilms}/${id}/0`);
+  },
+);
+
 export const fetchPromoFilm = createAsyncThunk<Film, undefined, {
   dispatch: AppDispatch;
   state: State;

@@ -5,6 +5,7 @@ import {checkAuthAction, loginAction, logoutAction} from '../api-actions';
 
 const initialState: UserProcess = {
   authorizationStatus: AuthorizationStatus.Unknown,
+  myList: [],
 };
 
 export const userProcess = createSlice({

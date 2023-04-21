@@ -4,18 +4,17 @@ import {useAppSelector} from '../../hooks';
 import HeadAuthorized from '../../components/head-authorized/head-authorized';
 import {AuthorizationStatus} from '../../consts';
 import HeadGuest from '../../components/head-guest/head-guest';
-import {getAuthStatus} from '../../store/user-process/selectors';
-import {getFilms} from '../../store/films-data/selectors';
+import {getAuthStatus, getMyFilms} from '../../store/user-process/selectors';
 
 function MyList(): JSX.Element {
   const authorizationStatus = useAppSelector(getAuthStatus);
-  const myFilms = useAppSelector(getFilms);
+  const myList = useAppSelector(getMyFilms);
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
         <LogoWTW isLight/>
 
-        <h1 className="page-title user-page__title">My list <span className="user-page__film-count">9</span></h1>
+        <h1 className="page-title user-page__title">My list <span className="user-page__film-count">{myList.length}</span></h1>
         {authorizationStatus === AuthorizationStatus.Unknown || authorizationStatus === AuthorizationStatus.NoAuth
           ? <HeadGuest/>
           : <HeadAuthorized/>}
@@ -25,7 +24,7 @@ function MyList(): JSX.Element {
         <h2 className="catalog__title visually-hidden">Catalog</h2>
 
         <div className="catalog__films-list">
-          <FilmList films={myFilms} countFilmsToSHow={myFilms.length}/>
+          <FilmList films={myList} countFilmsToSHow={myList.length}/>
         </div>
       </section>
 
