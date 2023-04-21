@@ -1,5 +1,5 @@
 import {Review} from '../../types/review';
-
+import moment from 'moment';
 type ReviewProp = {
   review: Review;
 }
@@ -10,7 +10,7 @@ export default function ReviewComponent({review}:ReviewProp): JSX.Element {
         <p className="review__text">{review.comment}</p>
         <footer className="review__details">
           <cite className="review__author">{review.user.name}</cite>
-          <time className="review__date" dateTime="2015-11-18">{review.date}</time>
+          <time className="review__date" dateTime={moment(review.date).format('LL')}>{moment(review.date).format('MMMM D, YYYY')}</time>
         </footer>
       </blockquote>
       <div className="review__rating">{review.rating}</div>

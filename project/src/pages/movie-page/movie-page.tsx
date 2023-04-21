@@ -7,20 +7,24 @@ import MoreLikeThis from '../../components/more-like-this/more-like-this';
 import {useEffect, useState} from 'react';
 import {useAppSelector} from '../../hooks';
 import {store} from '../../store';
-import {fetchCommentsAction, fetchSingleFilm} from '../../store/api-actions';
+import {fetchCommentsAction, fetchSimilarFilms, fetchSingleFilmAction} from '../../store/api-actions';
 import HeadGuest from '../../components/head-guest/head-guest';
 import HeadAuthorized from '../../components/head-authorized/head-authorized';
+import {getAuthStatus} from '../../store/user-process/selectors';
+import {getReviews} from '../../store/review-data/selectors';
+import {getSimilarFilms, getSingleFilm} from '../../store/films-data/selectors';
 
 function MoviePage(): JSX.Element {
-  const authorizationStatus = useAppSelector((state) => state.authorizationStatus);
-  const films = useAppSelector((state) => state.films);
-  const reviews = useAppSelector((state) => state.reviews);
+  const authorizationStatus = useAppSelector(getAuthStatus);
+  const reviews = useAppSelector(getReviews);
+  const similarFilms = useAppSelector(getSimilarFilms);
   const idFilm = Number(useParams().id);
-  const film = useAppSelector((state) => state.film);
+  const film = useAppSelector(getSingleFilm);
   const [openedTab, setActiveTab] = useState(ActiveTab.OVERVIEW);
   useEffect(() => {
-    store.dispatch(fetchSingleFilm(idFilm));
+    store.dispatch(fetchSingleFilmAction(idFilm));
     store.dispatch(fetchCommentsAction(idFilm));
+    store.dispatch(fetchSimilarFilms(idFilm));
   }, [idFilm]);
   return(
     <>
@@ -82,7 +86,7 @@ function MoviePage(): JSX.Element {
       <div className="page-content">
         <section className="catalog catalog--like-this">
           <h2 className="catalog__title">More like this</h2>
-          <MoreLikeThis films={films} film={film}/>
+          <MoreLikeThis films={similarFilms}/>
         </section>
 
         <footer className="page-footer">

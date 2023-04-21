@@ -1,18 +1,15 @@
-import {Film} from '../../types/film';
-import FilmList from '../film-list/film-list';
+import {Films} from '../../types/films';
+import FilmCard from '../film-card/film-card';
 
 type FilmGenre = {
-  film: Film;
-  films: Film[];
+  films: Films;
 }
 
-export default function MoreLikeThis({film, films}: FilmGenre): JSX.Element {
-  let genreArr = films.filter((value) => value.genre === film.genre && value !== film);
-  const withoutGenreArr = films.filter((value) => value.genre !== film.genre);
-  genreArr = genreArr.concat(withoutGenreArr).slice(0,4);
-
+export default function MoreLikeThis({films}: FilmGenre): JSX.Element {
   return (
     <div className="catalog__films-list">
-      <FilmList films={genreArr} countFilmsToSHow={4}/>
+      {films.map((x):JSX.Element=>(
+        <FilmCard film={x} key={`similar${x.id}${x.name}`}/>)
+      )}
     </div>);
 }

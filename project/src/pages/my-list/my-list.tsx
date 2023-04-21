@@ -4,10 +4,12 @@ import {useAppSelector} from '../../hooks';
 import HeadAuthorized from '../../components/head-authorized/head-authorized';
 import {AuthorizationStatus} from '../../consts';
 import HeadGuest from '../../components/head-guest/head-guest';
+import {getAuthStatus} from '../../store/user-process/selectors';
+import {getFilms} from '../../store/films-data/selectors';
 
 function MyList(): JSX.Element {
-  const authorizationStatus = useAppSelector((state) => state.authorizationStatus);
-  const myFilms = useAppSelector((state) => state.films);
+  const authorizationStatus = useAppSelector(getAuthStatus);
+  const myFilms = useAppSelector(getFilms);
   return (
     <div className="user-page">
       <header className="page-header user-page__head">

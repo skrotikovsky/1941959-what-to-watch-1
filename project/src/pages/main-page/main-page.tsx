@@ -1,34 +1,28 @@
 import {useNavigate} from 'react-router-dom';
 import FilmList from '../../components/film-list/film-list';
-import {AppRoute, AuthorizationStatus} from '../../consts';
+import {AppRoute, AuthorizationStatus, Genre} from '../../consts';
 import GenreFilter from '../../components/genre-filter/genre-filter';
 import {useAppDispatch, useAppSelector} from '../../hooks';
-import {useEffect} from 'react';
-import {loadFilmsByGenre} from '../../store/action';
 import ShowMore from '../../components/show-more/show-more';
 import LoadingScreen from '../../components/loading-screen/loading-screen';
 import HeadGuest from '../../components/head-guest/head-guest';
 import HeadAuthorized from '../../components/head-authorized/head-authorized';
+import {getLoadingStatus, getPromoFilm} from '../../store/films-data/selectors';
+import {getAuthStatus} from '../../store/user-process/selectors';
+import {getCountFilmsToShow, getFilmsByGenre} from '../../store/films-process/selectors';
+import {useEffect} from 'react';
+import {filmsProcess} from '../../store/films-process/films-process';
 
-type MainPageProps = {
-  filmName: string;
-  filmGenre: string;
-  filmReleaseDate: string;
-}
 
-function MainPage({filmName,filmGenre,filmReleaseDate}:MainPageProps): JSX.Element {
+function MainPage(): JSX.Element {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const loadingData = useAppSelector((state) => state.dataLoaded);
-  const genre = useAppSelector((state) => state.genre);
-  const countOfFilms = useAppSelector((state) => state.countFilmsToShow);
-  const filmsByGenre = useAppSelector((state) => state.films);
-  const authorizationStatus = useAppSelector((state) => state.authorizationStatus);
-  const promoFilm = useAppSelector((state) => state.promoFilm);
-
-  useEffect(()=>{
-    dispatch(loadFilmsByGenre());
-  },[genre]);
+  const loadingData = useAppSelector(getLoadingStatus);
+  const countOfFilms = useAppSelector(getCountFilmsToShow);
+  const authorizationStatus = useAppSelector(getAuthStatus);
+  const promoFilm = useAppSelector(getPromoFilm);
+  const genreFilms = useAppSelector(getFilmsByGenre);
+  useEffect(()=> {dispatch(filmsProcess.actions.setGenre(Genre.ALL_GENRES));},[]);
   return (
     <>
       <section className="film-card">
@@ -92,9 +86,9 @@ function MainPage({filmName,filmGenre,filmReleaseDate}:MainPageProps): JSX.Eleme
           <GenreFilter/>
           {loadingData && <LoadingScreen/>}
           <div className="catalog__films-list">
-            <FilmList films={filmsByGenre} countFilmsToSHow={countOfFilms}/>
+            <FilmList films={genreFilms} countFilmsToSHow={countOfFilms}/>
           </div>
-          {(filmsByGenre.length > countOfFilms) && <ShowMore/>}
+          {(genreFilms.length > countOfFilms) && <ShowMore/>}
         </section>
         <footer className="page-footer">
           <div className="logo">

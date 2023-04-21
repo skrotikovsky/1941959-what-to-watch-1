@@ -8,7 +8,6 @@ type FilmCardProps = {
 }
 
 export default function FilmCard ({film}:FilmCardProps): JSX.Element{
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isActive, setActive] = useState(false);
   let timerId: NodeJS.Timeout;
 

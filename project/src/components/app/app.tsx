@@ -13,20 +13,15 @@ import {useAppSelector} from '../../hooks';
 import HeadGuest from '../head-guest/head-guest';
 import HistoryRouter from '../history-router/history-router';
 import browserHistory from '../../browser-history';
-
-const FilmData = {
-  FILM_TITLE: 'The Grand Budapest Hotel',
-  FILM_GENRE: 'Drama',
-  FILM_YEAR: '2014',
-};
+import {getAuthStatus} from '../../store/user-process/selectors';
 
 function App(): JSX.Element {
-  const authorizationStatus = useAppSelector((state) => state.authorizationStatus);
+  const authorizationStatus = useAppSelector(getAuthStatus);
   return (
     <HistoryRouter history={browserHistory}>
       <Routes>
         <Route path={AppRoute.Main}>
-          <Route index element={<MainPage filmName = {FilmData.FILM_TITLE} filmGenre = {FilmData.FILM_GENRE} filmReleaseDate = {FilmData.FILM_YEAR}/>}/>
+          <Route index element={<MainPage/>}/>
           <Route path={AppRoute.SignIn} element={<SignIn/>}/>
           <Route path={'/test'} element={<HeadGuest/>}/>
           <Route path={AppRoute.MyList} element={<PrivateRoute authorizationStatus={authorizationStatus}><MyList/></PrivateRoute>}/>

@@ -17,10 +17,10 @@ export default function FilmTabs({isActive, film, reviews}: FilmNavProp): JSX.El
       {isActive === ActiveTab.REVIEWS &&
         <div className="film-card__reviews film-card__row">
           <div className="film-card__reviews-col">
-            <ReviewList reviews={leftColumn}/>
+            <ReviewList reviews={leftColumn} key={'leftColumn'}/>
           </div>
           <div className="film-card__reviews-col">
-            <ReviewList reviews={rightColumn}/>
+            <ReviewList reviews={rightColumn} key={'rightColumn'}/>
           </div>
         </div>}
       {isActive === ActiveTab.DETAILS &&

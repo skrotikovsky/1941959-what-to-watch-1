@@ -1,14 +1,14 @@
 import {useEffect, useState} from 'react';
 import {Genre} from '../../consts';
 import {useAppDispatch} from '../../hooks';
-import {changeGenre, resetFilmCounter} from '../../store/action';
+import {filmsProcess} from '../../store/films-process/films-process';
 
 export default function GenreFilter(): JSX.Element {
   const [activeGenre, setActiveGenre] = useState(Genre.ALL_GENRES);
   const dispatch = useAppDispatch();
   useEffect(()=>{
-    dispatch(changeGenre(activeGenre));
-    dispatch(resetFilmCounter());
+    dispatch(filmsProcess.actions.setGenre(activeGenre));
+    dispatch(filmsProcess.actions.resetFilmCounter());
   },[activeGenre]);
   return (
     <ul className="catalog__genres-list">

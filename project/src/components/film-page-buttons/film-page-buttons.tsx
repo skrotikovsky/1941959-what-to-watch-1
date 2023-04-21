@@ -1,13 +1,14 @@
 import {AppRoute, AuthorizationStatus} from '../../consts';
 import {useNavigate} from 'react-router-dom';
 import {useAppSelector} from '../../hooks';
+import {getAuthStatus} from '../../store/user-process/selectors';
 
 type FilmButtonsProps = {
   filmID: number;
 }
 export default function FilmPageButtons({filmID}: FilmButtonsProps): JSX.Element {
   const navigate = useNavigate();
-  const isAuth = useAppSelector((state) => state.authorizationStatus);
+  const isAuth = useAppSelector(getAuthStatus);
   return (
     <div className="film-card__buttons">
       <button onClick={()=>navigate(`${AppRoute.Player}`)} className="btn btn--play film-card__button" type="button">

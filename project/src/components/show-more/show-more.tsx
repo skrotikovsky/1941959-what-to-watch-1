@@ -1,11 +1,12 @@
 import {useAppDispatch} from '../../hooks';
-import {addFilmsCount} from '../../store/action';
+import {filmsProcess} from '../../store/films-process/films-process';
 
 export default function ShowMore(): JSX.Element {
   const dispatch = useAppDispatch();
+  const clickHandler = () => {dispatch(filmsProcess.actions.addFilmsCount());};
   return (
-    <div className="catalog__more">
-      <button onClick={()=>{dispatch(addFilmsCount());}} className="catalog__button" type="button">
+    <div onClick={clickHandler} className="catalog__more">
+      <button className="catalog__button" type="button">
       Show more
       </button>
     </div>

@@ -3,15 +3,16 @@ import LogoWTW from '../../components/logo-wtw/logo-wtw';
 import {useAppSelector} from '../../hooks';
 import {useEffect} from 'react';
 import {store} from '../../store';
-import {fetchSingleFilm} from '../../store/api-actions';
-import {useParams} from 'react-router-dom';
+import {fetchSingleFilmAction} from '../../store/api-actions';
+import {Link, useParams} from 'react-router-dom';
+import {getSingleFilm} from '../../store/films-data/selectors';
 
 function AddReview() {
-  const film = useAppSelector((state) => state.film);
+  const film = useAppSelector(getSingleFilm);
   const idFilm = Number(useParams().id);
   useEffect(()=> {
-    store.dispatch(fetchSingleFilm(idFilm));
-  });
+    store.dispatch(fetchSingleFilmAction(idFilm));
+  },[idFilm]);
   return (
     <section className="film-card film-card--full">
       <div className="film-card__header">
@@ -24,7 +25,7 @@ function AddReview() {
           <nav className="breadcrumbs">
             <ul className="breadcrumbs__list">
               <li className="breadcrumbs__item">
-                <a href="film-page.html" className="breadcrumbs__link">{film.name}</a>
+                <Link to={`/films/${idFilm}`} className="breadcrumbs__link">{film.name}</Link>
               </li>
               <li className="breadcrumbs__item">
                 <a className="breadcrumbs__link">Add review</a>
